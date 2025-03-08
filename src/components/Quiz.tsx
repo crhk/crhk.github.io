@@ -12,37 +12,76 @@ const settings = {
   slidesToScroll: 1,
 };
 
-export const Quiz = () => {
-  const items = [
-    {
-      id: 1,
-      question: "What is the capital of France?",
-      choices: ["Paris", "Madrid", "Rome", "Lisbon"],
-      answer: {
-        message: "Paris is the capital of France",
-        videoUrl: "https://www.youtube.com/embed/8k_9I9lQjGk",
+const items = [
+  {
+    id: 1,
+    question: "What is the capital of France?",
+    choices: [
+      {
+        label: "Paris",
+        isCorrect: true,
       },
-    },
-    {
-      id: 2,
-      question: "What is the capital of Spain?",
-      choices: ["Paris", "Madrid", "Rome", "Lisbon"],
-      answer: {
-        message: "Madrid is the capital of Spain",
-        videoUrl: "https://www.youtube.com/embed/8k_9I9lQjGk",
+      {
+        label: "Madrid",
       },
-    },
-    {
-      id: 3,
-      question: "What is the capital of Italy?",
-      choices: ["Paris", "Madrid", "Rome", "Lisbon"],
-      answer: {
-        message: "Rome is the capital of Italy",
-        videoUrl: "https://www.youtube.com/embed/8k_9I9lQjGk",
+      {
+        label: "Rome",
       },
+      {
+        label: "Lisbon",
+      },
+    ],
+    answer: {
+      videoUrl: "https://www.youtube.com/embed/8k_9I9lQjGk",
     },
-  ];
+  },
+  {
+    id: 2,
+    question: "What is the capital of Spain?",
+    choices: [
+      {
+        label: "Paris",
+      },
+      {
+        label: "Madrid",
+        isCorrect: true,
+      },
+      {
+        label: "Rome",
+      },
+      {
+        label: "Lisbon",
+      },
+    ],
+    answer: {
+      videoUrl: "https://www.youtube.com/embed/8k_9I9lQjGk",
+    },
+  },
+  {
+    id: 3,
+    question: "What is the capital of Italy?",
+    choices: [
+      {
+        label: "Paris",
+      },
+      {
+        label: "Madrid",
+      },
+      {
+        label: "Rome",
+        isCorrect: true,
+      },
+      {
+        label: "Lisbon",
+      },
+    ],
+    answer: {
+      videoUrl: "https://www.youtube.com/embed/8k_9I9lQjGk",
+    },
+  },
+];
 
+export const Quiz = () => {
   return (
     <Slider {...settings}>
       {items.map((item) => (
@@ -50,7 +89,7 @@ export const Quiz = () => {
           <Question key={item.id} question={item.question} />
           <Choices choices={item.choices} />
           <Answer
-            message={item.answer.message}
+            message={item.choices.find((choice) => choice.isCorrect)?.label}
             videoUrl={item.answer.videoUrl}
           />
         </div>
