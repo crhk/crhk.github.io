@@ -1,7 +1,5 @@
-import "./App.css";
-
 function App() {
-  return <>coucou</>;
+  return <div className="text-3xl font-bold underline">coucou</div>;
 }
 
 export default App;
