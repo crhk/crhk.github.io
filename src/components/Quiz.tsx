@@ -5,8 +5,8 @@ import { Choices } from "./Choices";
 import { Question } from "./Question";
 
 const settings = {
+  arrows: false,
   dots: true,
-  infinite: true,
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
@@ -15,7 +15,10 @@ const settings = {
 const items = [
   {
     id: 1,
-    question: "What is the capital of France?",
+    question: {
+      label: "What is the capital of France?",
+      videoUrl: "https://www.youtube.com/embed/8k_9I9lQjGk",
+    },
     choices: [
       {
         label: "Paris",
@@ -37,7 +40,10 @@ const items = [
   },
   {
     id: 2,
-    question: "What is the capital of Spain?",
+    question: {
+      label: "What is the capital of Spain?",
+      videoUrl: "https://www.youtube.com/embed/8k_9I9lQjGk",
+    },
     choices: [
       {
         label: "Paris",
@@ -59,7 +65,10 @@ const items = [
   },
   {
     id: 3,
-    question: "What is the capital of Italy?",
+    question: {
+      label: "What is the capital of Italy?",
+      videoUrl: "https://www.youtube.com/embed/8k_9I9lQjGk",
+    },
     choices: [
       {
         label: "Paris",
@@ -86,7 +95,7 @@ export const Quiz = () => {
     <Slider {...settings}>
       {items.map((item) => (
         <div>
-          <Question key={item.id} question={item.question} />
+          <Question key={item.id} {...item.question} />
           <Choices choices={item.choices} />
           <Answer
             message={item.choices.find((choice) => choice.isCorrect)?.label}

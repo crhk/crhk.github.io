@@ -1,11 +1,24 @@
 interface QuestionProps {
-  question: string;
+  label: string;
+  videoUrl?: string;
 }
 
-export const Question = ({ question }: QuestionProps) => {
+export const Question = ({ label, videoUrl }: QuestionProps) => {
   return (
     <div>
-      <h1 className="text-xl font-extrabold">{question}</h1>
+      <h1 className="text-xl font-extrabold">{label}</h1>
+      {!!videoUrl && (
+        <iframe
+          width="560"
+          height="315"
+          src={videoUrl}
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        ></iframe>
+      )}
     </div>
   );
 };
