@@ -1,5 +1,5 @@
 function App() {
-  return <div className="text-3xl font-bold underline">coucou</div>;
+  return <h1 className="mx-auto">coucou</h1>;
 }
 
 export default App;
