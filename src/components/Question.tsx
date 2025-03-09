@@ -6,7 +6,7 @@ interface QuestionProps {
 export const Question = ({ label, videoUrl }: QuestionProps) => {
   return (
     <div>
-      <h1 className="text-xl font-extrabold">{label}</h1>
+      <h1 className="text-3xl font-extrabold">{label}</h1>
       {!!videoUrl && (
         <iframe
           width="560"
@@ -17,6 +17,7 @@ export const Question = ({ label, videoUrl }: QuestionProps) => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
+          className="mt-5"
         ></iframe>
       )}
     </div>

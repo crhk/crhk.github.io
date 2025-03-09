@@ -17,7 +17,7 @@ const items = [
     id: 1,
     question: {
       label: "What is the capital of France?",
-      videoUrl: "https://www.youtube.com/embed/8k_9I9lQjGk",
+      videoUrl: "https://youtu.be/rzmEh8S7xB8?si=sYwmLm7h2ZEwJf-T",
     },
     choices: [
       {
@@ -35,14 +35,14 @@ const items = [
       },
     ],
     answer: {
-      videoUrl: "https://www.youtube.com/embed/8k_9I9lQjGk",
+      videoUrl: "https://youtu.be/rzmEh8S7xB8?si=sYwmLm7h2ZEwJf-T",
     },
   },
   {
     id: 2,
     question: {
       label: "What is the capital of Spain?",
-      videoUrl: "https://www.youtube.com/embed/8k_9I9lQjGk",
+      videoUrl: "https://youtu.be/rzmEh8S7xB8?si=sYwmLm7h2ZEwJf-T",
     },
     choices: [
       {
@@ -60,14 +60,14 @@ const items = [
       },
     ],
     answer: {
-      videoUrl: "https://www.youtube.com/embed/8k_9I9lQjGk",
+      videoUrl: "https://youtu.be/rzmEh8S7xB8?si=sYwmLm7h2ZEwJf-T",
     },
   },
   {
     id: 3,
     question: {
       label: "What is the capital of Italy?",
-      videoUrl: "https://www.youtube.com/embed/8k_9I9lQjGk",
+      videoUrl: "https://youtu.be/rzmEh8S7xB8?si=sYwmLm7h2ZEwJf-T",
     },
     choices: [
       {
@@ -85,7 +85,7 @@ const items = [
       },
     ],
     answer: {
-      videoUrl: "https://www.youtube.com/embed/8k_9I9lQjGk",
+      videoUrl: "https://youtu.be/rzmEh8S7xB8?si=sYwmLm7h2ZEwJf-T",
     },
   },
 ];
@@ -94,13 +94,15 @@ export const Quiz = () => {
   return (
     <Slider {...settings}>
       {items.map((item) => (
-        <div>
-          <Question key={item.id} {...item.question} />
-          <Choices choices={item.choices} />
-          <Answer
-            message={item.choices.find((choice) => choice.isCorrect)?.label}
-            videoUrl={item.answer.videoUrl}
-          />
+        <div key={item.id}>
+          <div className="flex flex-col items-center text-center">
+            <Question {...item.question} />
+            <Choices choices={item.choices} />
+            <Answer
+              message={item.choices.find((choice) => choice.isCorrect)?.label}
+              videoUrl={item.answer.videoUrl}
+            />
+          </div>
         </div>
       ))}
     </Slider>
