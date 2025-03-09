@@ -17,7 +17,7 @@ const items = [
     id: 1,
     question: {
       label: "What is the capital of France?",
-      videoUrl: "https://youtu.be/rzmEh8S7xB8?si=sYwmLm7h2ZEwJf-T",
+      videoUrl: "https://www.youtube.com/embed/_JhmNjntth8?si=mwNhkTVgw3dkmXuy",
     },
     choices: [
       {
@@ -35,14 +35,14 @@ const items = [
       },
     ],
     answer: {
-      videoUrl: "https://youtu.be/rzmEh8S7xB8?si=sYwmLm7h2ZEwJf-T",
+      videoUrl: "https://www.youtube.com/embed/_JhmNjntth8?si=mwNhkTVgw3dkmXuy",
     },
   },
   {
     id: 2,
     question: {
       label: "What is the capital of Spain?",
-      videoUrl: "https://youtu.be/rzmEh8S7xB8?si=sYwmLm7h2ZEwJf-T",
+      videoUrl: "https://www.youtube.com/embed/_JhmNjntth8?si=mwNhkTVgw3dkmXuy",
     },
     choices: [
       {
@@ -60,14 +60,14 @@ const items = [
       },
     ],
     answer: {
-      videoUrl: "https://youtu.be/rzmEh8S7xB8?si=sYwmLm7h2ZEwJf-T",
+      videoUrl: "https://www.youtube.com/embed/_JhmNjntth8?si=mwNhkTVgw3dkmXuy",
     },
   },
   {
     id: 3,
     question: {
       label: "What is the capital of Italy?",
-      videoUrl: "https://youtu.be/rzmEh8S7xB8?si=sYwmLm7h2ZEwJf-T",
+      videoUrl: "https://www.youtube.com/embed/_JhmNjntth8?si=mwNhkTVgw3dkmXuy",
     },
     choices: [
       {
@@ -85,7 +85,7 @@ const items = [
       },
     ],
     answer: {
-      videoUrl: "https://youtu.be/rzmEh8S7xB8?si=sYwmLm7h2ZEwJf-T",
+      videoUrl: "https://www.youtube.com/embed/_JhmNjntth8?si=mwNhkTVgw3dkmXuy",
     },
   },
 ];
