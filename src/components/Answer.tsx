@@ -1,15 +1,17 @@
 import { Accordion } from "rsuite";
 
 interface AnswerProps {
-  message?: string;
+  message?: React.ReactNode;
   videoUrl?: string;
 }
 
 export const Answer = ({ message, videoUrl }: AnswerProps) => {
   return (
-    <Accordion>
-      <Accordion.Panel header="Voir la réponse">
-        {!!message && <p className="text-2xl mt-5 font-extrabold">{message}</p>}
+    <Accordion className="bg-gray-100">
+      <Accordion.Panel header="Voir la réponse" className="bg-gray-100">
+        {!!message && (
+          <p className="text-2xl mt-5 font-extrabold text-black">{message}</p>
+        )}
         {!!videoUrl && (
           <iframe
             width="560"

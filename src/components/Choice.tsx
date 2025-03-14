@@ -3,5 +3,5 @@ interface ChoiceProps {
 }
 
 export const Choice = ({ children }: ChoiceProps) => {
-  return <li className="italic">{children}</li>;
+  return <li className="italic mb-10">{children}</li>;
 };
