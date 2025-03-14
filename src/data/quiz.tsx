@@ -116,7 +116,26 @@ export const items = [
   },
   {
     question: {
+      label: "Can Necro hit Ryu with his 2MK ?",
+      videoUrl: "https://www.youtube.com/embed/2H_We08bmrM?si=WBb47ZwS-7Y6tKOt",
+    },
+    choices: [
+      {
+        label: "Yes",
+      },
+      {
+        label: "No",
+        isCorrect: true,
+      },
+    ],
+    answer: {
+      videoUrl: "https://www.youtube.com/embed/_MYlx0GiV4g?si=evL6ZAsjw3SwKEcP",
+    },
+  },
+  {
+    question: {
       label: "Can Ken punish Dudley's forward HP with SA3?",
+      videoUrl: "https://www.youtube.com/embed/HwtaB8GbBYo?si=u6Rb3iiG6Snl3oYo",
     },
     choices: [
       {
@@ -127,6 +146,9 @@ export const items = [
         label: "No",
       },
     ],
+    answer: {
+      videoUrl: "https://www.youtube.com/embed/rM81tPf1tNk?si=eKMmWG0ivK5pJUtT",
+    },
   },
   {
     question: {
